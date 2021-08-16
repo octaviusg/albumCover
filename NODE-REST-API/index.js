@@ -10,7 +10,7 @@ mongoose.connect(
   process.env.MONGO_URL,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
-    console.log("you are connected to the database");
+    console.log("you are connected to mogoDB);
   }
 );
 
