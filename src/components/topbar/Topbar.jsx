@@ -12,7 +12,7 @@ export default function Topbar() {
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
-          <SearchIcon style={{ fontSize: 20, color: "#9F9F9F" }} />
+          <SearchIcon className="searchIcon" />
           <input
             type="text"
             placeholder="Search for artist, album titles, users, etc…"
@@ -23,9 +23,9 @@ export default function Topbar() {
       <div className="topbarRight">
         <div className="topNavIcons">
           <NotificationsIcon />
-          <span className="notSymbolnotication">2</span>
+          <span className="notifcationBadge">2</span>
           <PersonIcon />
-          <span className="noSymbolperson">1</span>
+          <span className="notifcationBadge">1</span>
         </div>
         <img src="/assets/ogProfile.jpeg" alt="img" className="topbarProfile" />
       </div>
