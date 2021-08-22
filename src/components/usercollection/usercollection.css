@@ -1,0 +1,15 @@
+.userCollectionContainer {
+  display: flex;
+  flex-direction: column;
+}
+.collectionImg {
+  width: 245px;
+  padding: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+.collection {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2%;
+}

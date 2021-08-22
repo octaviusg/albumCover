@@ -1,18 +1,15 @@
 import React from "react";
+import SinglePost from "../singlepost/SinglePost.jsx";
 import "./feed.css";
+
+import { Posts } from "../../dummyData";
 
 export default function Feed() {
   return (
     <div className="feedContainer">
-      <div className="postContainer">
-        <div className="postHeader">
-          <div className="author">
-            <img src="" alt="" className="authorImg" />
-            <span className="authorName">Ramb0_69</span>
-          </div>
-        </div>
-        <img src="" alt="" className="postImg" />
-      </div>
+      {Posts.map((p) => (
+        <SinglePost key={p.id} post={p} />
+      ))}
     </div>
   );
 }

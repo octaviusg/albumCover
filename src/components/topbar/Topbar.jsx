@@ -8,7 +8,7 @@ export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="logo">Album Cover</span>
+        <span className="branding">hi-fi cover</span>
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
@@ -27,7 +27,11 @@ export default function Topbar() {
           <PersonIcon />
           <span className="notifcationBadge">1</span>
         </div>
-        <img src="/assets/ogProfile.jpeg" alt="img" className="topbarProfile" />
+        <img
+          src="/assets/person/ogProfile.jpeg"
+          alt="img"
+          className="topbarProfile"
+        />
       </div>
     </div>
   );
