@@ -1,14 +1,33 @@
 import React from "react";
-import UserCollection from "../usercollection/UserCollection";
+import Feed from "../../components/feed/Feed";
 import "./userprofile.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { useParams } from "react-router";
+
+import blankProfile from "../blank-profile.png";
 
 export default function UserProfile() {
+  const [user, setUser] = useState({});
+  const username = useParams().username;
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const res = await axios.get(`/users?username=${username}`);
+      setUser(res.data);
+    };
+    fetchUser();
+  }, []);
   return (
     <div className="profileContainer">
       <div className="profileInfo">
-        <img src="/assets/person/ogProfile.jpeg" alt="" className="userImg" />
+        <img
+          src={user.profilePicture || blankProfile}
+          alt=""
+          className="userImg"
+        />
         <div className="userbio">
-          <span className="userName">Octavio Garcia</span>
+          <span className="userName">{user.username}</span>
           <span className="usertagline">Austin, Tx</span>
         </div>
 
@@ -17,7 +36,7 @@ export default function UserProfile() {
         </div>
       </div>
 
-      <div className="userCollectionContainer">
+      {/* <div className="userCollectionContainer">
         <div className="genres">
           <div className="genreNav">
             <ul>
@@ -27,49 +46,51 @@ export default function UserProfile() {
                 </a>
               </li>
               <li>
-                <a href="#">Hip-Hop </a>
+                <a href="/">Hip-Hop </a>
               </li>
 
               <li>
-                <a href="#"> Country </a>
+                <a href="/"> Country </a>
               </li>
               <li>
-                <a href="#"> Folk </a>
+                <a href="/"> Folk </a>
               </li>
               <li>
-                <a href="#"> Rock </a>
+                <a href="/"> Rock </a>
               </li>
               <li>
-                <a href="#">Pop </a>
+                <a href="/">Pop </a>
               </li>
               <li>
-                <a href="#">Indie </a>
+                <a href="/">Indie </a>
               </li>
               <li>
-                <a href="#">Alt.-Rock </a>
+                <a href="/">Alt.-Rock </a>
               </li>
               <li>
-                <a href="#">Jazz </a>
+                <a href="/">Jazz </a>
               </li>
               <li>
-                <a href="#">Blues </a>
+                <a href="/">Blues </a>
               </li>
               <li>
-                <a href="#">Latin </a>
+                <a href="/">Latin </a>
               </li>
               <li>
-                <a href="#">Latin </a>
+                <a href="/">Latin </a>
               </li>
               <li>
-                <a href="#">Latin </a>
+                <a href="/">Latin </a>
               </li>
               <li>
-                <a href="#">Latin </a>
+                <a href="/">Latin </a>
               </li>
             </ul>
           </div>
         </div>
-        <div className="collection"></div>
+      </div> */}
+      <div className="collection">
+        <Feed username={username} />
       </div>
     </div>
   );

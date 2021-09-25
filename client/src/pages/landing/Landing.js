@@ -1,5 +1,6 @@
 import React from "react";
 import "./landing.css";
+import { Link } from "react-router-dom";
 
 export default function Landing() {
   return (
@@ -30,16 +31,16 @@ export default function Landing() {
         <div className="footerNav">
           <ul>
             <li>
-              <a href="#home">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="#">Help Center</a>
+              <Link to="/helpcenter">Help Center</Link>
             </li>
             <li>
-              <a href="#">Terms of Service</a>
+              <Link to="/termsofservice">Terms of Service</Link>
             </li>
             <li>
-              <a href="#">Advertising </a>
+              <Link to="/advertising"> Advertising</Link>
             </li>
             <li>© 2021 AlbumCover </li>
           </ul>

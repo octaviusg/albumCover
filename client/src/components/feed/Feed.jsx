@@ -1,14 +1,26 @@
+import { useEffect, useState } from "react";
 import React from "react";
 import SinglePost from "../singlepost/SinglePost.jsx";
 import "./feed.css";
+import axios from "axios";
 
-import { Posts } from "../../dummyData";
+export default function Feed({ username }) {
+  const [posts, setPosts] = useState([]);
 
-export default function Feed() {
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const res = username
+        ? await axios.get("/posts/profile/" + username)
+        : await axios.get("posts/timeline/611b333fe18f322e06887ee8");
+      setPosts(res.data);
+    };
+    fetchPosts();
+  }, [username]);
+
   return (
     <div className="feedContainer">
-      {Posts.map((p) => (
-        <SinglePost key={p.id} post={p} />
+      {posts.map((p) => (
+        <SinglePost key={p._id} post={p} />
       ))}
     </div>
   );

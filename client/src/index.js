@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import { AuthContexProvider } from "./contex/AuthContex";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AuthContexProvider>
+      <App />
+    </AuthContexProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

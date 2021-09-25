@@ -10,7 +10,6 @@
   padding-bottom: 5px;
   margin-bottom: 15px;
   margin-right: 15px;
-  cursor: pointer;
 }
 
 .postHeader {
@@ -18,9 +17,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 5px;
+  padding: 5px 5px 5px 5px;
   width: 324px;
-  color: #8f8f8f;
+  color: #858585;
 }
 
 .author {
@@ -36,19 +35,23 @@
 .authorName {
   margin-left: 5px;
 }
-.postBookmarkIcon {
-  font-size: 18px !important ;
-  margin: 0 !important;
-  color: red !important;
+.bookmarks {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.postBookmarkTrue {
-  font-size: 18px !important ;
-  margin: 0 !important;
-  color: red !important;
+.bmark {
+  font-size: 20px !important;
 }
+.link {
+  color: #858585;
+  text-decoration: none;
+}
+
 .postImg {
   width: 324px;
   height: 324px;
   object-fit: contain;
+  cursor: pointer;
 }

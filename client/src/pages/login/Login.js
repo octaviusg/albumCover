@@ -1,7 +1,15 @@
-import React from "react";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
 import "./login.css";
 
 export default function Login() {
+  const email = useRef();
+  const password = useRef();
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log(password.current.value);
+  };
+
   return (
     <div className="loginContainer">
       <div className="topbarLanding">
@@ -13,15 +21,17 @@ export default function Login() {
       <div className="bodyContainerLogin">
         <div className="loginformwrap">
           <div className="header">Log In</div>
-          <div className="loginBox">
-            <div className="loginTitle" htmlFor="username">
+          <form className="loginBox" onSubmit={handleClick}>
+            <div className="loginTitle" htmlFor="email">
               Email
             </div>
             <input
-              type="text"
-              name="username"
+              type="email"
+              required
+              name="email"
               className="login-input"
               autoComplete="new-password"
+              ref={email}
             />
 
             <div className="loginTitle" htmlFor="password">
@@ -29,18 +39,21 @@ export default function Login() {
             </div>
             <input
               type="password"
+              required
+              minLength="6"
               name="password"
               className="login-input"
               autoComplete="new-password"
+              ref={password}
             />
 
             <div className="lowerForm">
               <span className="loginForgot">Forgot Password?</span>
-              <button type="button" className="login-btn">
+              <button type="submit" className="login-btn">
                 Log In
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
 
@@ -48,18 +61,18 @@ export default function Login() {
         <div className="footerNav">
           <ul>
             <li>
-              <a href="#home">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="">Help Center</a>
+              <Link to="/helpcenter">Help Center</Link>
             </li>
             <li>
-              <a href="">Terms of Service</a>
+              <Link to="/termsofservice">Terms of Service</Link>
             </li>
             <li>
-              <a href="">Advertising</a>
+              <Link to="/advertising"> Advertising</Link>
             </li>
-            <li className="copyright">© 2021 AlbumCover </li>
+            <li>© 2021 AlbumCover </li>
           </ul>
         </div>
       </div>

@@ -28,7 +28,7 @@ export default function Topbar() {
           <span className="notifcationBadge">1</span>
         </div>
         <img
-          src="/assets/person/ogProfile.jpeg"
+          src="/assets/profile-thumb/ogProfile.jpeg"
           alt="img"
           className="topbarProfile"
         />
