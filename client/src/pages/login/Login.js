@@ -1,14 +1,20 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
+import { loginCall } from "../../apiCalls";
+import { AuthContext } from "../../context/AuthContext";
 
 export default function Login() {
   const email = useRef();
   const password = useRef();
+
+  const { user, isFetching, dispatch } = useContext(AuthContext);
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(password.current.value);
+    loginCall({ email, password }, dispatch);
   };
+
+  console.log(user);
 
   return (
     <div className="loginContainer">
