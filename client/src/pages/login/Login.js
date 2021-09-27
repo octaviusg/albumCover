@@ -23,7 +23,10 @@ export default function Login() {
   return (
     <div className="loginContainer">
       <div className="topbarLanding">
-        <div className="branding">hi-fi cover</div>
+        <Link className="brandLink" to="/">
+          <div className="branding">hi-fi cover</div>
+        </Link>
+
         <div className="signupBtnContainer">
           <Link to="/signup">
             <button className="signUpBtnNew">Sign Up</button>
@@ -42,7 +45,6 @@ export default function Login() {
               required
               name="email"
               className="login-input"
-              autoComplete="off"
               ref={email}
             />
 
@@ -55,7 +57,6 @@ export default function Login() {
               minLength="6"
               name="password"
               className="login-input"
-              autoComplete="off"
               ref={password}
             />
 

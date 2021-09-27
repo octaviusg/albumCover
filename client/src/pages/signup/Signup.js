@@ -5,7 +5,10 @@ export default function Signup() {
   return (
     <div className="loginContainer">
       <div className="topbarLanding">
-        <div className="branding">hi-fi cover</div>
+        <Link className="brandLink" to="/">
+          <div className="branding">hi-fi cover</div>
+        </Link>
+
         <div className="signupBtnContainer">
           <Link to="/login">
             <button className="signUpBtnNew">Login</button>
@@ -54,7 +57,7 @@ export default function Signup() {
               autoComplete="new-password"
             />
             <div className="lowerForm">
-              <span className="loginForgot">Forgot Password?</span>
+              <span className="placeholder"></span>
               <button type="button" className="login-btn">
                 Sign up
               </button>
