@@ -7,6 +7,7 @@ import AddCircleIcon from "@material-ui/icons/AddCircle";
 import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import BookmarksIcon from "@material-ui/icons/Bookmarks";
 import SettingsIcon from "@material-ui/icons/Settings";
+
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
@@ -22,9 +23,15 @@ export default function Sidebar() {
         <Link className="sideLink" to={`profile/${user.username}`}>
           <PhotoLibraryIcon className="navIcon" />
         </Link>
-        <AddCircleIcon className="navIcon" />
-        <ExploreIcon className="navIcon" />
-        <BookmarksIcon className="navIcon" />
+        <Link className="sideLink" to={`profile/${user.username}`}>
+          <AddCircleIcon className="navIcon" />
+        </Link>
+        <Link className="sideLink" to={`profile/${user.username}`}>
+          <ExploreIcon className="navIcon" />
+        </Link>
+        <Link className="sideLink" to={`profile/${user.username}`}>
+          <BookmarksIcon className="navIcon" />
+        </Link>
       </div>
       <div className="settings">
         <SettingsIcon className="navIcon" />

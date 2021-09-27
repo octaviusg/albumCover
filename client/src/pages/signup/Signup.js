@@ -1,7 +1,35 @@
+import axios from "axios";
 import React from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
 
 export default function Signup() {
+  const username = useRef();
+  const email = useRef();
+  const password = useRef();
+  const rePassword = useRef();
+  const history = useHistory();
+
+  const registerHandleClick = async (e) => {
+    e.preventDefault();
+    if (rePassword.current.value !== password.current.value) {
+      rePassword.current.setCustomValidity("Both passwords must match");
+    } else {
+      const user = {
+        username: username.current.value,
+        email: email.current.value,
+        password: password.current.value,
+      };
+      try {
+        await axios.post("/auth/register", user);
+        history.push("/login");
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  };
+
   return (
     <div className="loginContainer">
       <div className="topbarLanding">
@@ -18,15 +46,17 @@ export default function Signup() {
       <div className="bodyContainerLogin">
         <div className="loginformwrap">
           <div className="header">Sign up</div>
-          <div className="loginBox">
+
+          <form className="loginBox" onSubmit={registerHandleClick}>
             <div className="loginTitle" htmlFor="username">
               Name
             </div>
             <input
               type="text"
+              ref={username}
               name="username"
               className="login-input"
-              autoComplete="new-password"
+              autoComplete="off"
             />
 
             <div className="loginTitle" htmlFor="password">
@@ -34,35 +64,38 @@ export default function Signup() {
             </div>
             <input
               type="email"
+              ref={email}
               name="email"
               className="login-input"
-              autoComplete="new-password"
+              autoComplete="off"
             />
             <div className="loginTitle" htmlFor="password">
               Password
             </div>
             <input
               type="password"
+              ref={password}
               name="password"
               className="login-input"
-              autoComplete="new-password"
+              autoComplete="off"
             />
             <div className="loginTitle" htmlFor="password">
               Re-enter Password
             </div>
             <input
               type="password"
+              ref={rePassword}
               name="password"
               className="login-input"
-              autoComplete="new-password"
+              autoComplete="off"
             />
             <div className="lowerForm">
               <span className="placeholder"></span>
-              <button type="button" className="login-btn">
+              <button type="submit" className="login-btn">
                 Sign up
               </button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
 

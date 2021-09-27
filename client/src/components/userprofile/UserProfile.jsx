@@ -28,7 +28,7 @@ export default function UserProfile() {
         />
         <div className="userbio">
           <span className="userName">{user.username}</span>
-          <span className="usertagline">Austin, Tx</span>
+          <span className="usertagline">{user.desc}</span>
         </div>
 
         <div className="userInteraction">
