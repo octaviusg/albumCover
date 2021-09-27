@@ -8,7 +8,7 @@ import About from "./pages/about/About";
 import HelpCenter from "./pages/helpcenter/HelpCenter";
 import TermsOfService from "./pages/termsofservice/TermsOfService";
 import Advertising from "./pages/advertising/Advertising";
-
+import NewPost from "./pages/newpost/NewPost";
 import {
   BrowserRouter as Router,
   Switch,
@@ -30,6 +30,10 @@ function App() {
 
         <Route path="/profile/:username">
           <Profile />
+        </Route>
+
+        <Route path="/new-album">
+          <NewPost />
         </Route>
 
         <Route path="/about">

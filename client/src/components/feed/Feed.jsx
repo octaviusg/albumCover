@@ -17,7 +17,7 @@ export default function Feed({ username }) {
       setPosts(res.data);
     };
     fetchPosts();
-  }, []);
+  }, [username, user._id]);
 
   return (
     <div className="feedContainer">

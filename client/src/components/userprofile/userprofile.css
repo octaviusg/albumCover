@@ -2,7 +2,6 @@
   flex: 11.5;
   display: flex;
   display: inline-block;
-  margin-right: 10%;
 }
 .bodyContent {
   display: flex;
@@ -12,6 +11,7 @@
 .profileInfo {
   display: flex;
   height: 160px;
+  width: 88%;
   border-radius: 10px;
   color: #202020;
   background-color: #fdfdfd;
