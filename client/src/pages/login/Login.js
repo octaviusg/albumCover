@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./login.css";
 import { loginCall } from "../../apiCalls";
 import { AuthContext } from "../../context/AuthContext";
+import { CircularProgress } from "@material-ui/core";
 
 export default function Login() {
   const email = useRef();
@@ -11,7 +12,10 @@ export default function Login() {
   const { user, isFetching, dispatch } = useContext(AuthContext);
   const handleClick = (e) => {
     e.preventDefault();
-    loginCall({ email, password }, dispatch);
+    loginCall(
+      { email: email.current.value, password: password.current.value },
+      dispatch
+    );
   };
 
   console.log(user);
@@ -36,7 +40,7 @@ export default function Login() {
               required
               name="email"
               className="login-input"
-              autoComplete="new-password"
+              autoComplete="off"
               ref={email}
             />
 
@@ -49,14 +53,18 @@ export default function Login() {
               minLength="6"
               name="password"
               className="login-input"
-              autoComplete="new-password"
+              autoComplete="off"
               ref={password}
             />
 
             <div className="lowerForm">
               <span className="loginForgot">Forgot Password?</span>
               <button type="submit" className="login-btn">
-                Log In
+                {isFetching ? (
+                  <CircularProgress color="white" size="10px" />
+                ) : (
+                  "Log In"
+                )}
               </button>
             </div>
           </form>
