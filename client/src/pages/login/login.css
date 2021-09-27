@@ -36,11 +36,18 @@
   width: 250px;
   display: flex;
   flex-direction: column;
+
+  margin-top: 20px;
+
+  box-shadow: rgba(109, 97, 97, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  padding: 20px 50px 40px 50px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
 }
 
 .login-input {
-  width: 250px;
-
+  width: 100%;
   background-color: rgba(0, 0, 0, 0);
   color: #1a1a1a;
   border: none;
@@ -48,7 +55,7 @@
   height: 30px;
   transition: height 1s;
   -webkit-transition: height 1s;
-  border-bottom: solid 1px #1a1a1a;
+  border-bottom: solid 1px #bdbdbd;
 }
 
 .loginTitle {
@@ -57,7 +64,7 @@
 }
 
 .header {
-  padding: 0 0 40px 0;
+  padding: 20px 0 5px 0;
   font-size: 30px;
 }
 .login-btn {
@@ -77,6 +84,13 @@
 .loginForgot {
   font-size: 10px;
   margin-top: 6px;
+  cursor: pointer;
+}
+
+.loginForgotLink {
+  text-decoration: none;
+  height: 15px;
+  color: #1a1a1a;
 }
 
 .login-btn:hover {

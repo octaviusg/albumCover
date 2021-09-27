@@ -31,49 +31,51 @@ export default function Landing() {
           </span>
         </div>
 
-        <div className="loginBox">
-          <div className="loginTitle" htmlFor="username">
-            Name
-          </div>
-          <input
-            type="text"
-            name="username"
-            className="login-input"
-            autoComplete="new-password"
-          />
+        <div className="landingRegisterWrap">
+          <div className="loginBox">
+            <div className="loginTitle" htmlFor="username">
+              Name
+            </div>
+            <input
+              type="text"
+              name="username"
+              className="login-input"
+              autoComplete="new-password"
+            />
 
-          <div className="loginTitle" htmlFor="password">
-            Email
-          </div>
-          <input
-            type="email"
-            name="email"
-            className="login-input"
-            autoComplete="new-password"
-          />
-          <div className="loginTitle" htmlFor="password">
-            Password
-          </div>
-          <input
-            type="password"
-            name="password"
-            className="login-input"
-            autoComplete="new-password"
-          />
-          <div className="loginTitle" htmlFor="password">
-            Re-enter Password
-          </div>
-          <input
-            type="password"
-            name="password"
-            className="login-input"
-            autoComplete="new-password"
-          />
-          <div className="lowerForm">
-            <span className="placeholder"></span>
-            <button type="button" className="login-btn">
-              Sign up
-            </button>
+            <div className="loginTitle" htmlFor="password">
+              Email
+            </div>
+            <input
+              type="email"
+              name="email"
+              className="login-input"
+              autoComplete="new-password"
+            />
+            <div className="loginTitle" htmlFor="password">
+              Password
+            </div>
+            <input
+              type="password"
+              name="password"
+              className="login-input"
+              autoComplete="new-password"
+            />
+            <div className="loginTitle" htmlFor="password">
+              Re-enter Password
+            </div>
+            <input
+              type="password"
+              name="password"
+              className="login-input"
+              autoComplete="new-password"
+            />
+            <div className="lowerForm">
+              <span className="placeholder"></span>
+              <button type="button" className="login-btn">
+                Sign up
+              </button>
+            </div>
           </div>
         </div>
       </div>

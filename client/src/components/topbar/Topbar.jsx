@@ -3,12 +3,14 @@ import "./topbar.css";
 import SearchIcon from "@material-ui/icons/Search";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import PersonIcon from "@material-ui/icons/Person";
-
+import { Link } from "react-router-dom";
 export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="branding">hi-fi cover</span>
+        <Link className="brandLink" to="/">
+          <div className="branding">hi-fi cover</div>
+        </Link>
       </div>
       <div className="topbarCenter">
         <div className="searchBar">

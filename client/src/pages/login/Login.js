@@ -61,7 +61,10 @@ export default function Login() {
             />
 
             <div className="lowerForm">
-              <span className="loginForgot">Forgot Password ?</span>
+              <Link className="loginForgotLink" to="/about">
+                <span className="loginForgot">Forgot Password ?</span>
+              </Link>
+
               <button type="submit" className="login-btn">
                 {isFetching ? (
                   <CircularProgress color="white" size="10px" />

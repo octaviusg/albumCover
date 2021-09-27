@@ -27,6 +27,7 @@ function App() {
         </Route>
         <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
         <Route path="/signup">{user ? <Redirect to="/" /> : <Signup />}</Route>
+
         <Route path="/profile/:username">
           <Profile />
         </Route>
