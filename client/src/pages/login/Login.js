@@ -25,7 +25,9 @@ export default function Login() {
       <div className="topbarLanding">
         <div className="branding">hi-fi cover</div>
         <div className="signupBtnContainer">
-          <button className="signUpBtnNew">Sign Up</button>
+          <Link to="/signup">
+            <button className="signUpBtnNew">Sign Up</button>
+          </Link>
         </div>
       </div>
       <div className="bodyContainerLogin">
@@ -58,7 +60,7 @@ export default function Login() {
             />
 
             <div className="lowerForm">
-              <span className="loginForgot">Forgot Password?</span>
+              <span className="loginForgot">Forgot Password ?</span>
               <button type="submit" className="login-btn">
                 {isFetching ? (
                   <CircularProgress color="white" size="10px" />

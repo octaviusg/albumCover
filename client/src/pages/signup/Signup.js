@@ -7,7 +7,9 @@ export default function Signup() {
       <div className="topbarLanding">
         <div className="branding">hi-fi cover</div>
         <div className="signupBtnContainer">
-          <button className="signUpBtnNew">Login</button>
+          <Link to="/login">
+            <button className="signUpBtnNew">Login</button>
+          </Link>
         </div>
       </div>
       <div className="bodyContainerLogin">
