@@ -38,7 +38,7 @@ export default function SinglePost({ post }) {
     <div className="feedContainer">
       <div className="postCard">
         <div className="postHeader">
-          <Link className="link" to={`profile/${user.username}`}>
+          <Link className="link" to={`/profile/${user.username}`}>
             <div className="author">
               <img
                 src={user.profilePicture || blankProfile}

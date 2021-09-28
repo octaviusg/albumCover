@@ -20,7 +20,7 @@ export default function Sidebar() {
           <HomeIcon className="navIcon" />
         </Link>
 
-        <Link className="sideLink" to={`profile/${user.username}`}>
+        <Link className="sideLink" to={`/collection/${user.username}`}>
           <PhotoLibraryIcon className="navIcon" />
         </Link>
         <Link className="sideLink" to="/new-album">

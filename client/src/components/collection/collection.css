@@ -1,0 +1,9 @@
+.collectionContainer {
+  flex: 11.5;
+  display: flex;
+  display: inline-block;
+}
+.bodyContent {
+  display: flex;
+  width: 100%;
+}
