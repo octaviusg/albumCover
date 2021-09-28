@@ -3,3 +3,112 @@
   display: flex;
   display: inline-block;
 }
+
+.postForm {
+  margin: 10px 0 0 10px;
+  width: 54%;
+  display: flex;
+  flex-direction: row;
+  box-shadow: rgba(109, 97, 97, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+}
+
+.postInputs {
+  display: flex;
+  flex-direction: column;
+  width: 340px;
+  margin-right: 5%;
+}
+
+.fileUploadContainer {
+  height: 280px;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: #000000 dashed 1px;
+  border-radius: 10px;
+}
+.file-btn {
+  width: 180px;
+}
+
+.share-btn {
+  background-color: #1a1a1a;
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  border: none;
+  width: 90px;
+  font-weight: 500;
+  font-size: 10pt;
+  letter-spacing: 1px;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  width: 280px;
+}
+.postTitle {
+  font-size: 12pt;
+  padding: 10px 0 5px 0;
+}
+.post-input {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  color: #1a1a1a;
+  border: none;
+  outline: none;
+  height: 20px;
+
+  transition: height 1s;
+  -webkit-transition: height 1s;
+  border-bottom: solid 1px #bdbdbd;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.custom-file-input {
+  color: transparent;
+  width: 189px;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: "Select album artwork";
+  color: #747474;
+  display: inline-block;
+  background: #f3f3f3;
+  border-radius: 6px;
+  padding: 10px 20px;
+  outline: none;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 10pt;
+  transition: 0.3s;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: #d1d1d1;
+}
+
+.uploadIcon {
+  color: #d1d1d1;
+}

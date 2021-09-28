@@ -10,13 +10,10 @@
 
 .profileInfo {
   display: flex;
-  height: 160px;
-  width: 88%;
+  height: 120px;
+  width: 97%;
   border-radius: 10px;
   color: #202020;
-  background-color: #fdfdfd;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   margin-bottom: 20px;
   margin-top: 5px;
   align-items: center;
@@ -26,20 +23,18 @@
   margin-left: 10px;
 }
 .userName {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .usertagline {
-  font-size: 14px;
+  font-size: 30px;
   color: #8f8f8f;
-  margin-left: 5px;
 }
 
 .userImg {
   border-radius: 50%;
-  width: 130px;
-  height: 130px;
-  margin-left: 15px;
+  width: 80px;
+  height: 80px;
 }
 
 .userbio {
@@ -52,13 +47,13 @@
 .userInteraction {
   align-self: flex-end;
   flex: 1;
+  margin-bottom: 25px;
 }
 
 .followUser {
   background-color: #1a1a1a;
-  padding: 10px 30px 10px 30px;
+  padding: 10px 20px 10px 20px;
   border: none;
-  width: 120px;
   font-size: 12px;
   letter-spacing: 1px;
   margin-right: 20px;
@@ -66,7 +61,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .followUser:hover {

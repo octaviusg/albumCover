@@ -16,7 +16,7 @@ export default function Sidebar() {
   return (
     <div className="sideBarContainer">
       <div className="sideNav">
-        <Link className="sideLink" to="/">
+        <Link className="sideLink" activeClassName="active" to="/">
           <HomeIcon className="navIcon" />
         </Link>
 
@@ -26,10 +26,10 @@ export default function Sidebar() {
         <Link className="sideLink" to="/new-album">
           <AddCircleIcon className="navIcon" />
         </Link>
-        <Link className="sideLink" to={`profile/${user.username}`}>
+        <Link className="sideLink" to={`/profile/${user.username}`}>
           <ExploreIcon className="navIcon" />
         </Link>
-        <Link className="sideLink" to={`profile/${user.username}`}>
+        <Link className="sideLink" to={`/profile/${user.username}`}>
           <BookmarksIcon className="navIcon" />
         </Link>
       </div>

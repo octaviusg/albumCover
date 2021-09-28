@@ -1,11 +1,11 @@
 .sideBarContainer {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex: 0.6;
   height: calc(100vh - 80px);
   align-items: center;
   position: sticky;
-  top: 80px;
+  top: 55px;
 }
 
 .sideNav {
