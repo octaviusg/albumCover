@@ -55,6 +55,7 @@ export default function Signup() {
               type="text"
               ref={username}
               name="username"
+              required
               className="login-input"
               autoComplete="off"
             />
@@ -66,6 +67,7 @@ export default function Signup() {
               type="email"
               ref={email}
               name="email"
+              required
               className="login-input"
               autoComplete="off"
             />
@@ -76,6 +78,7 @@ export default function Signup() {
               type="password"
               ref={password}
               name="password"
+              required
               className="login-input"
               autoComplete="off"
             />
@@ -86,12 +89,13 @@ export default function Signup() {
               type="password"
               ref={rePassword}
               name="password"
+              required
               className="login-input"
               autoComplete="off"
             />
             <div className="lowerForm">
               <span className="placeholder"></span>
-              <button type="submit" className="login-btn">
+              <button type="submit" className="signUpBtn">
                 Sign up
               </button>
             </div>

@@ -17,6 +17,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { AuthContext } from "./context/AuthContext";
+import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   const { user } = useContext(AuthContext);

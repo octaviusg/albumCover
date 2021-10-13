@@ -21,7 +21,7 @@ export default function Topbar() {
           <SearchIcon className="searchIcon" />
           <input
             type="text"
-            placeholder="Search for artist, album titles, users, etc…"
+            placeholder="Search collections by username"
             className="search"
           />
         </div>

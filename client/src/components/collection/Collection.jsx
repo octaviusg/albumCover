@@ -3,9 +3,6 @@ import "./collection.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
-
-import "./collection.css";
-
 import Grid from "../grid/Grid";
 
 function Collection() {

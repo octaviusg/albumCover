@@ -18,7 +18,12 @@ export default function GridItem({ post }) {
 
   return (
     <div className="grid-item">
-      <img src={PF + post.img} alt="" className="postImg" />
+      <img
+        oncontextmenu="return false"
+        src={post.catNum}
+        alt=""
+        className="postImg"
+      />
     </div>
   );
 }

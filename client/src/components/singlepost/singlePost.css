@@ -52,5 +52,5 @@
   width: 280px;
   height: 280px;
   object-fit: contain;
-  cursor: pointer;
+  cursor: default;
 }

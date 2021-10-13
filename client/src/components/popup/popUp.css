@@ -1,0 +1,51 @@
+.cat-header {
+  color: #969696;
+  letter-spacing: 0.3px;
+}
+.look {
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.btn-modal {
+  margin-top: 3px;
+}
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  cursor: default;
+}
+
+.modal-content {
+  position: relative;
+  top: 10%;
+  left: 38%;
+  margin-top: 0.1vh;
+  color: #1a1a1a;
+  line-height: 2;
+  background: #fdfdfd;
+  letter-spacing: 0.3px;
+  box-shadow: rgba(109, 97, 97, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  padding: 14px 28px;
+  font-size: 10pt;
+  font-weight: 300;
+  cursor: default;
+  border-radius: 10px;
+  max-width: 68vh;
+  min-width: 45vh;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+  right: 10px;
+  padding: 5px 7px;
+}

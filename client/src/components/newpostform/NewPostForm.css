@@ -6,7 +6,7 @@
 
 .postForm {
   margin: 10px 0 0 10px;
-  width: 54%;
+  width: 50vh;
   display: flex;
   flex-direction: row;
   box-shadow: rgba(109, 97, 97, 0.1) 0px 1px 3px 0px,
@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: column;
   width: 340px;
-  margin-right: 5%;
+  margin-right: 10%;
 }
 
 .fileUploadContainer {
@@ -59,7 +59,14 @@
 }
 .postTitle {
   font-size: 12pt;
+  letter-spacing: 0.3px;
+  font-weight: 400;
   padding: 10px 0 5px 0;
+}
+
+.contrast {
+  color: #bbbbbb;
+  padding: 0 4px;
 }
 .post-input {
   width: 100%;
@@ -73,42 +80,38 @@
   -webkit-transition: height 1s;
   border-bottom: solid 1px #bdbdbd;
   margin-top: 5px;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
 }
 
-.custom-file-input {
-  color: transparent;
-  width: 189px;
-}
-.custom-file-input::-webkit-file-upload-button {
-  visibility: hidden;
-}
-.custom-file-input::before {
-  content: "Select album artwork";
-  color: #747474;
-  display: inline-block;
-  background: #f3f3f3;
-  border-radius: 6px;
+.artwork-btn {
+  background-color: #dadada;
   padding: 10px 20px;
-  outline: none;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+
   font-weight: 500;
   font-size: 10pt;
+  letter-spacing: 1px;
+  color: #5e5e5e;
+  border-radius: 6px;
+  cursor: pointer;
   transition: 0.3s;
 }
-.custom-file-input:hover::before {
-  border-color: black;
-}
-.custom-file-input:active {
-  outline: 0;
-}
-.custom-file-input:active::before {
-  background: #d1d1d1;
-}
-
 .uploadIcon {
   color: #d1d1d1;
+  padding-bottom: 30px;
+  position: absolute;
+}
+
+.catInfo {
+  font-size: 7pt;
+  cursor: pointer;
+  color: #f78080;
+}
+
+.formatInfo {
+  font-size: 7pt;
+  display: flex;
+
+  color: #818181;
 }

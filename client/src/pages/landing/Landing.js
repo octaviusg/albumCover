@@ -49,24 +49,24 @@ export default function Landing() {
       <div className="bodyContainer">
         <div className="tagLine">
           <span className="mainTag">
-            <p>We are here</p>
-            <p>to recognize </p>
-            <p>LP artwork.</p>
+            <p>The place for</p>
+            <p>Lp Artwork </p>
           </span>
-          <span className="lowertag">
-            <p>Share your music collection and keep track</p>
-            <p>of what has been purchased.</p>
-          </span>
+          <div className="lowertag">
+            <p>Share your LP collection.</p>
+            <p>Keep track of what has been purchased.</p>
+          </div>
         </div>
 
         <div className="landingRegisterWrap">
           <form className="loginBox" onSubmit={registerHandleClick}>
             <div className="loginTitle" htmlFor="username">
-              Names *
+              Name *
             </div>
             <input
               type="text"
               ref={username}
+              required
               name="username"
               className="login-input"
               autoComplete="off"
@@ -78,6 +78,7 @@ export default function Landing() {
             <input
               type="email"
               ref={email}
+              required
               name="email"
               className="login-input"
               autoComplete="off"
@@ -89,6 +90,7 @@ export default function Landing() {
               type="password"
               ref={password}
               name="password"
+              required
               className="login-input"
               autoComplete="off"
             />
@@ -98,13 +100,14 @@ export default function Landing() {
             <input
               type="password"
               ref={rePassword}
+              required
               name="password"
               className="login-input"
               autoComplete="off"
             />
             <div className="lowerForm">
               <span className="placeholder"></span>
-              <button type="submit" className="login-btn">
+              <button type="submit" className="signUpBtn">
                 Sign up
               </button>
             </div>

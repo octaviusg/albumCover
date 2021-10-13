@@ -2,10 +2,13 @@
   display: flex;
   flex-direction: column;
   flex: 0.6;
-  height: calc(100vh - 80px);
+  min-width: 4rem;
+  height: 100%;
   align-items: center;
+  flex-direction: column;
+  font-size: 7pt;
   position: sticky;
-  top: 55px;
+  top: 53px;
 }
 
 .sideNav {
@@ -34,4 +37,14 @@
 
 .sideLink {
   color: #202020;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sideLink:hover {
+  color: #a0a0a0;
+  transition: 0.3s;
 }

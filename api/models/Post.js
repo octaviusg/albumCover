@@ -5,11 +5,16 @@ const PostSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    desc: {
-      type: "String",
-      max: 255,
+    catNum: {
+      type: String,
     },
-    img: {
+    genre: {
+      type: String,
+    },
+    title: {
+      type: String,
+    },
+    masterUrl: {
       type: String,
     },
     likes: {

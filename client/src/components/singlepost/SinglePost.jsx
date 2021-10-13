@@ -10,7 +10,7 @@ export default function SinglePost({ post }) {
   const [like, setLike] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
   const [user, setUser] = useState({});
-  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
   const { user: currentUser } = useContext(AuthContext);
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export default function SinglePost({ post }) {
             <BookmarkBorderIcon className="bmark" onClick={likeHandler} />
           </div>
         </div>
-        <img src={PF + post.img} alt="" className="postImg" />
+        <img src={post.catNum} alt="" className="postImg" />
       </div>
     </div>
   );
