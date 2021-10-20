@@ -84,7 +84,7 @@ router.get("/explore/:username", async (req, res) => {
   try {
     const posts = await Post.find();
 
-    const shuffled = posts.sort(() => Math.random() - 0.5);
+    const shuffled = posts.sort(() => Math.random() - 0.7);
 
     res.status(200).json(shuffled);
   } catch (err) {

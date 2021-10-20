@@ -69,17 +69,24 @@ export default function AlbumInfoCard() {
             <div className="T-title">Track list</div>
             <div className="right">
               <div className="albumTrackInfo">
-                <div className="position">
-                  {tracks && tracks.map((t) => <li>{t.position}</li>)}
+                <div class="column">
+                  <table>
+                    {tracks && tracks.map((t) => <td>{t.position}</td>)}
+                  </table>
                 </div>
-                <div className="trackTitle">
-                  {tracks && tracks.map((t) => <li>{t.title}</li>)}
+                <div class="column">
+                  <table>
+                    {tracks &&
+                      tracks.map((t) => <td className="titles">{t.title}</td>)}
+                  </table>
                 </div>
-
-                <div className="trackDuration">
-                  {tracks && tracks.map((t) => <li>{t.duration}</li>)}
+                <div class="column">
+                  <table>
+                    {tracks && tracks.map((t) => <td>{t.duration}</td>)}
+                  </table>
                 </div>
               </div>
+
               <div className="gnAtt">
                 <div className="genreGroup">
                   <span className="greys">Genre</span>

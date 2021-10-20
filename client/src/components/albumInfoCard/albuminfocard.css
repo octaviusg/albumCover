@@ -40,8 +40,21 @@
 
 .albumTrackInfo {
   display: flex;
-  list-style: none;
-  width: auto;
+}
+
+table {
+  display: grid;
+  grid-template-columns: 3fr;
+  grid-auto-flow: row;
+  padding-right: 1rem;
+}
+
+td {
+  width: max-content;
+}
+
+.titles {
+  padding-right: 1.3rem;
 }
 
 .gnAtt {
