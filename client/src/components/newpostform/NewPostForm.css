@@ -75,7 +75,8 @@
   border: none;
   outline: none;
   height: 20px;
-
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
   transition: height 1s;
   -webkit-transition: height 1s;
   border-bottom: solid 1px #bdbdbd;

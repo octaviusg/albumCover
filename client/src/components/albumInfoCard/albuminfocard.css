@@ -1,0 +1,107 @@
+.albumInfoContainer {
+  flex: 11.5;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.albumHeader {
+  display: flex;
+  margin-bottom: 5px;
+}
+.content {
+  padding: 1% 0 0 1%;
+  flex-wrap: wrap;
+}
+.tt {
+  font-size: 26pt;
+  font-weight: 300;
+}
+
+.tt:nth-child(2) {
+  color: #b1b1b1;
+  font-size: 13pt;
+  font-weight: 100;
+  margin-bottom: 4px;
+}
+
+.bookmark-Ainfo {
+  margin-left: 1%;
+  line-height: 2.5;
+}
+
+.albumAtt {
+  display: flex;
+}
+
+.albumInfoimg {
+  width: 300px;
+  height: 300px;
+}
+
+.albumTrackInfo {
+  display: flex;
+  list-style: none;
+  width: auto;
+}
+
+.gnAtt {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+}
+
+.yearGroup {
+  display: flex;
+  flex-direction: column;
+  min-width: 8rem;
+  margin-bottom: 8px;
+}
+
+.genreGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.catnumberGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.greys {
+  font-size: 8pt;
+  font-weight: 200;
+}
+
+.position {
+  padding-right: 3%;
+  font-weight: 200;
+}
+
+.trackTitle {
+  font-weight: 500;
+}
+
+.trackTitle li {
+  height: 20px;
+  overflow: hidden;
+}
+
+.trackDuration {
+  font-weight: 200;
+  padding-right: 3%;
+}
+
+.right {
+  display: flex;
+}
+
+.trackInfo {
+  padding-left: 3%;
+}
+
+.T-title {
+  font-size: 8pt;
+  font-weight: 200;
+}

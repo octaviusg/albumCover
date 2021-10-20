@@ -10,6 +10,9 @@ import TermsOfService from "./pages/termsofservice/TermsOfService";
 import Advertising from "./pages/advertising/Advertising";
 import UserCollection from "./pages/usercollection/UserCollection";
 import NewPost from "./pages/newpost/NewPost";
+import Bookmarks from "./pages/bookmarks/Bookmarks";
+import AlbumInfo from "./pages/albumInfo/AlbumInfo";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,13 +20,26 @@ import {
   Redirect,
 } from "react-router-dom";
 import { AuthContext } from "./context/AuthContext";
-import Sidebar from "./components/sidebar/Sidebar";
+import Explore from "./pages/explore/Explore";
 
 function App() {
   const { user } = useContext(AuthContext);
   return (
     <Router>
       <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/helpcenter">
+          <HelpCenter />
+        </Route>
+        <Route path="/termsofservice">
+          <TermsOfService />
+        </Route>
+        <Route path="/advertising">
+          <Advertising />
+        </Route>
+
         <Route exact path="/">
           {user ? <Home /> : <Landing />}
         </Route>
@@ -36,21 +52,20 @@ function App() {
         <Route path="/collection/:username">
           <UserCollection />
         </Route>
-        <Route path="/new-album">
+        <Route path="/addtitle">
           <NewPost />
         </Route>
 
-        <Route path="/about">
-          <About />
+        <Route path="/explore">
+          <Explore />
         </Route>
-        <Route path="/helpcenter">
-          <HelpCenter />
+
+        <Route path="/bookmarks">
+          <Bookmarks />
         </Route>
-        <Route path="/termsofservice">
-          <TermsOfService />
-        </Route>
-        <Route path="/advertising">
-          <Advertising />
+
+        <Route path="/:postId">
+          <AlbumInfo />
         </Route>
       </Switch>
     </Router>

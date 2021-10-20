@@ -49,7 +49,7 @@ export default function Signup() {
 
           <form className="loginBox" onSubmit={registerHandleClick}>
             <div className="loginTitle" htmlFor="username">
-              Name
+              Username <span className="red">*</span>
             </div>
             <input
               type="text"
@@ -61,7 +61,7 @@ export default function Signup() {
             />
 
             <div className="loginTitle" htmlFor="password">
-              Email
+              Email <span className="red">*</span>
             </div>
             <input
               type="email"
@@ -72,7 +72,7 @@ export default function Signup() {
               autoComplete="off"
             />
             <div className="loginTitle" htmlFor="password">
-              Password
+              Password <span className="red">*</span>
             </div>
             <input
               type="password"

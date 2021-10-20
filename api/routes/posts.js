@@ -19,7 +19,7 @@ router.put("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
     if (post.userId === req.body.userId) {
-      await post.updateOne({ $set: req.body });
+      await post.update({ $set: req.body });
       res.status(200).json("the post has been updated");
     } else {
       res.status(403).json("you can update only your post");
@@ -59,12 +59,45 @@ router.put("/:id/like", async (req, res) => {
     res.status(500).json(err);
   }
 });
-//get a post
 
+//get a post
 router.get("/:id", async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
     res.status(200).json(post);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/album-info/", async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    res.status(200).json(post);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//explore posts
+router.get("/explore/:username", async (req, res) => {
+  try {
+    const posts = await Post.find();
+
+    const shuffled = posts.sort(() => Math.random() - 0.5);
+
+    res.status(200).json(shuffled);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//get bookmarked posts
+router.get("/bookmarks/:userId", async (req, res) => {
+  try {
+    const posts = await Post.find({ likes: req.params.userId });
+
+    res.status(200).json(posts.sort());
   } catch (err) {
     res.status(500).json(err);
   }
@@ -80,7 +113,7 @@ router.get("/timeline/:userId", async (req, res) => {
         return Post.find({ userId: friendId });
       })
     );
-    res.status(200).json(userPosts.concat(...friendPosts));
+    res.status(200).json(userPosts.concat(...friendPosts).reverse());
   } catch (err) {
     res.status(500).json(err);
   }
@@ -91,20 +124,12 @@ router.get("/profile/:username", async (req, res) => {
   try {
     const user = await User.findOne({ username: req.params.username });
     const posts = await Post.find({ userId: user._id });
-    res.status(200).json(posts);
+    res.status(200).json(posts.reverse());
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get("/collection/:username", async (req, res) => {
-  try {
-    const user = await User.findOne({ username: req.params.username });
-    const posts = await Post.find({ userId: user._id });
-    res.status(200).json(posts);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//get users collection
 
 module.exports = router;

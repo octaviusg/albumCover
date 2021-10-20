@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import React from "react";
 import SinglePost from "../singlepost/SinglePost.jsx";
 import "./feed.css";
 import axios from "axios";

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./singlePost.css";
 import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
+
+import BookmarkIcon from "@material-ui/icons/Bookmark";
 import axios from "axios";
 import blankProfile from "../blank-profile.png";
 import { Link } from "react-router-dom";
@@ -50,12 +52,18 @@ export default function SinglePost({ post }) {
             </div>
           </Link>
           <div className="bookmarks">
-            {like}
             <div className="bookmarkIcon" />
-            <BookmarkBorderIcon className="bmark" onClick={likeHandler} />
+
+            {isLiked ? (
+              <BookmarkIcon className="bmark" onClick={likeHandler} />
+            ) : (
+              <BookmarkBorderIcon className="bmark" onClick={likeHandler} />
+            )}
           </div>
         </div>
-        <img src={post.catNum} alt="" className="postImg" />
+        <Link to={`/${post._id}`}>
+          <img src={post.catNum} alt="" className="postImg" />
+        </Link>
       </div>
     </div>
   );

@@ -12,9 +12,20 @@ const PostSchema = new mongoose.Schema(
       type: String,
     },
     title: {
-      type: String,
+      type: Array,
+      default: [],
     },
     masterUrl: {
+      type: String,
+    },
+    trackList: {
+      type: Array,
+      default: [],
+    },
+    catNumber: {
+      type: String,
+    },
+    year: {
       type: String,
     },
     likes: {

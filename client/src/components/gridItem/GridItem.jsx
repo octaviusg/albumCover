@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./gridItem.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function GridItem({ post }) {
   const [user, setUser] = useState({});
@@ -17,13 +18,15 @@ export default function GridItem({ post }) {
   }, [post.userId]);
 
   return (
-    <div className="grid-item">
-      <img
-        oncontextmenu="return false"
-        src={post.catNum}
-        alt=""
-        className="postImg"
-      />
+    <div className="grid-itemCo">
+      <Link to={`/${post._id}`}>
+        <img
+          oncontextmenu="return false"
+          src={post.catNum}
+          alt=""
+          className="gridImg"
+        />
+      </Link>
     </div>
   );
 }

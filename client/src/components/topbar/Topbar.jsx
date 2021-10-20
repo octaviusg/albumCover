@@ -12,9 +12,11 @@ export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <Link className="brandLink" to="/">
-          <div className="branding">hi-fi cover</div>
-        </Link>
+        <div>
+          <Link className="brandLink" to="/">
+            <span className="brandinglog">hi-fi cover </span>
+          </Link>
+        </div>
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
@@ -29,9 +31,7 @@ export default function Topbar() {
       <div className="topbarRight">
         <div className="topNavIcons">
           <NotificationsIcon />
-          <span className="notifcationBadge">2</span>
-          <PersonIcon />
-          <span className="notifcationBadge">1</span>
+          <span className="notifcationBadge"></span>
         </div>
         <Link to={`/profile/${user.username}`}>
           <img

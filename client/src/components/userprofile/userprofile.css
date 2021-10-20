@@ -21,14 +21,17 @@
 
 .userbio {
   margin-left: 10px;
+  min-width: 400px;
 }
 .userName {
-  font-size: 20px;
+  font-size: 14pt;
+
   display: inline-block;
 }
 
 .usertagline {
-  font-size: 30px;
+  font-size: 18pt;
+  font-weight: 200;
   color: #8f8f8f;
 }
 
@@ -55,6 +58,7 @@
   background-color: #1a1a1a;
   padding: 10px 20px 10px 20px;
   border: none;
+  min-width: 100px;
   font-size: 12px;
   letter-spacing: 1px;
   margin-right: 20px;

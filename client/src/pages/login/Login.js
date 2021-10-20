@@ -67,7 +67,7 @@ export default function Login() {
 
               <button type="submit" className="login-btn">
                 {isFetching ? (
-                  <CircularProgress color="white" size="10px" />
+                  <CircularProgress color="inherit" size="10px" />
                 ) : (
                   "Log In"
                 )}
@@ -81,16 +81,16 @@ export default function Login() {
         <div className="footerNav">
           <ul>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/">About</Link>
             </li>
             <li>
-              <Link to="/helpcenter">Help Center</Link>
+              <Link to="/">Help Center</Link>
             </li>
             <li>
-              <Link to="/termsofservice">Terms of Service</Link>
+              <Link to="/">Terms of Service</Link>
             </li>
             <li>
-              <Link to="/advertising"> Advertising</Link>
+              <Link to="/"> Advertising</Link>
             </li>
             <li>© 2021 AlbumCover </li>
           </ul>

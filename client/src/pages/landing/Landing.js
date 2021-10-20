@@ -49,8 +49,8 @@ export default function Landing() {
       <div className="bodyContainer">
         <div className="tagLine">
           <span className="mainTag">
-            <p>The place for</p>
-            <p>Lp Artwork </p>
+            <p>The place for </p>
+            <p>your lp artwork </p>
           </span>
           <div className="lowertag">
             <p>Share your LP collection.</p>
@@ -61,7 +61,7 @@ export default function Landing() {
         <div className="landingRegisterWrap">
           <form className="loginBox" onSubmit={registerHandleClick}>
             <div className="loginTitle" htmlFor="username">
-              Name *
+              Username <span className="red">*</span>
             </div>
             <input
               type="text"
@@ -73,7 +73,7 @@ export default function Landing() {
             />
 
             <div className="loginTitle" htmlFor="password">
-              Email *
+              Email <span className="red">*</span>
             </div>
             <input
               type="email"
@@ -84,7 +84,7 @@ export default function Landing() {
               autoComplete="off"
             />
             <div className="loginTitle" htmlFor="password">
-              Password *
+              Password <span className="red">*</span>
             </div>
             <input
               type="password"
