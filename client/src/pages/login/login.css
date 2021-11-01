@@ -6,20 +6,20 @@
 }
 
 .signUpBtnNew {
-  background-color: #1a1a1a;
+  background-color: var(--btnbg-color);
   padding: 10px 20px 10px 20px;
   width: 90px;
   border: none;
   font-size: 12px;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: var(--secondary-text-color);
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .signUpBtnNew:hover {
-  background-color: #3f3f3f;
+  background-color: var(--btnBgHover-color);
   transition: 0.3s;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
@@ -33,25 +33,22 @@
 }
 
 .loginformwrap {
-  width: 250px;
   display: flex;
   flex-direction: column;
-
-  margin-top: 20px;
-
+  width: 43vh;
   box-shadow: rgba(109, 97, 97, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  padding: 20px 50px 40px 50px;
   border-radius: 10px;
-  background-color: #fdfdfd;
+  background-color: var(--formBg-color);
+  padding: 1.6rem 1rem;
 }
 
 .login-input {
-  width: 100%;
   background-color: rgba(0, 0, 0, 0);
-  color: #1a1a1a;
+  color: var(--btnbg-color);
   border: none;
   outline: none;
+  width: 100%;
   height: 30px;
   transition: height 1s;
   -webkit-transition: height 1s;
@@ -59,24 +56,22 @@
 }
 
 .loginTitle {
-  margin-top: 30px;
-  font-size: 14px;
+  margin-top: 1.8rem;
+  font-size: 10pt;
 }
 
 .header {
-  padding: 20px 0 5px 0;
-  font-size: 30px;
+  font-size: 22pt;
 }
 .login-btn {
-  background-color: #1a1a1a;
+  background-color: var(--btnbg-color);
   padding: 10px 20px 10px 20px;
   margin-top: 20px;
   border: none;
-  width: 90px;
   font-weight: 500;
   font-size: 9pt;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: var(--secondary-text-color);
   border-radius: 6px;
   cursor: pointer;
   transition: 0.3s;
@@ -91,18 +86,17 @@
 .loginForgotLink {
   text-decoration: none;
   height: 15px;
-  color: #1a1a1a;
+  color: var(--btnbg-color);
 }
 
 .login-btn:hover {
-  background-color: #3f3f3f;
+  background-color: var(--btnBgHover-color);
   transition: 0.3s;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
 .lowerForm {
   display: flex;
-  width: 258px;
   justify-content: space-between;
 }
 
@@ -114,7 +108,7 @@
   color: #707070;
 }
 
-.footerNav ul {
+.footer ul {
   list-style-type: none;
   margin: 20px 20px 20px 20px;
   padding: 0;
@@ -125,7 +119,7 @@
   scroll-behavior: smooth;
 }
 
-.footerNav li a {
+.footer li a {
   display: block;
   text-align: center;
   padding: 10px 22px 10px 22px;
@@ -134,16 +128,7 @@
   transition: 0.3s;
 }
 
-.footerNav li a:hover {
-  display: block;
-  text-align: center;
-  padding: 10px 22px 10px 22px;
-  text-decoration: none;
-  color: #707070;
-  transition: 0.3s;
-}
-
-.footerNav li a:hover {
+.footer li a:hover {
   transition: 0.3s;
   color: #b6b6b6;
 }
@@ -166,5 +151,11 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--secondary-text-color) inset !important;
+}
+
+@media screen and (max-width: 480px) {
+  .loginformwrap {
+    width: 36vh;
+  }
 }

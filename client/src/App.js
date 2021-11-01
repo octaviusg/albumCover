@@ -12,7 +12,8 @@ import UserCollection from "./pages/usercollection/UserCollection";
 import NewPost from "./pages/newpost/NewPost";
 import Bookmarks from "./pages/bookmarks/Bookmarks";
 import AlbumInfo from "./pages/albumInfo/AlbumInfo";
-
+import Settings from "./pages/settings/UserSettings";
+import UserSettings from "./pages/settings/UserSettings";
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +22,7 @@ import {
 } from "react-router-dom";
 import { AuthContext } from "./context/AuthContext";
 import Explore from "./pages/explore/Explore";
+import "./app.css";
 
 function App() {
   const { user } = useContext(AuthContext);
@@ -49,22 +51,26 @@ function App() {
         <Route path="/profile/:username">
           <Profile />
         </Route>
-        <Route path="/collection/:username">
+        <Route exact path="/collection/:username">
           <UserCollection />
         </Route>
-        <Route path="/addtitle">
+        <Route exact path="/addtitle">
           <NewPost />
         </Route>
 
-        <Route path="/explore">
+        <Route exact path="/explore">
           <Explore />
         </Route>
 
-        <Route path="/bookmarks">
+        <Route exact path="/bookmarks">
           <Bookmarks />
         </Route>
 
-        <Route path="/:postId">
+        <Route exact path="/settings">
+          <UserSettings />
+        </Route>
+
+        <Route path="/album-info/:postId">
           <AlbumInfo />
         </Route>
       </Switch>

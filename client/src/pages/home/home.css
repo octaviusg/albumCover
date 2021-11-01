@@ -6,3 +6,9 @@
 .red {
   color: #fa7575;
 }
+
+.arrowPad {
+  margin: 2px 0 16px 0;
+  cursor: pointer;
+  font-size: 20pt;
+}

@@ -7,8 +7,14 @@
   background-color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  padding-bottom: 3px;
-  margin: 2px 2px 2px 0;
+  margin: 2px 5px 2px 0;
+  height: fit-content;
+}
+
+.moreLink {
+  cursor: pointer !important;
+  font-size: 14px !important;
+  padding-left: 2px;
 }
 
 .postHeader {
@@ -18,14 +24,16 @@
   font-weight: 200;
   flex-direction: row;
   justify-content: space-between;
-  padding: 3px 3px 0 2px;
-  width: 280px;
+  padding: 3px 3px 3px 3px;
+  width: 285px;
   color: #858585;
+  align-items: center;
 }
 
 .author {
   display: flex;
   align-items: center;
+  margin-right: 0.6rem;
 }
 
 .authorImg {
@@ -44,8 +52,8 @@
 }
 
 .bmark {
-  font-size: 20px !important;
-  color: #919191 !important;
+  font-size: 14px !important;
+  color: #858585 !important;
   cursor: pointer;
 }
 .link {
@@ -54,9 +62,32 @@
 }
 
 .postImg {
-  width: 280px;
-  height: 280px;
-  object-fit: contain;
+  object-fit: fill;
+  width: 290px;
+  height: 290px;
   cursor: default;
   cursor: pointer;
+}
+
+.postMenu {
+  margin-top: 5.6rem;
+  margin-left: -0.2rem;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 120px;
+  min-height: 60px;
+  text-decoration: none;
+}
+
+.pMenuItem {
+  padding: 10pt 20pt 6pt 5pt;
+}
+
+.pmenulink {
+  color: #202020;
+  text-decoration: none;
+}
+
+.pmenulink:hover {
+  color: #d3d3d3;
 }

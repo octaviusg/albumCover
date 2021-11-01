@@ -10,8 +10,8 @@
 
 .profileInfo {
   display: flex;
-  height: 120px;
-  width: 97%;
+  height: 8rem;
+  width: 75rem;
   border-radius: 10px;
   color: #202020;
   margin-bottom: 20px;
@@ -58,7 +58,8 @@
   background-color: #1a1a1a;
   padding: 10px 20px 10px 20px;
   border: none;
-  min-width: 100px;
+  display: flex;
+  align-items: center;
   font-size: 12px;
   letter-spacing: 1px;
   margin-right: 20px;

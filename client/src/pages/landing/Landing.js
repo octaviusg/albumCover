@@ -49,11 +49,11 @@ export default function Landing() {
       <div className="bodyContainer">
         <div className="tagLine">
           <span className="mainTag">
-            <p>The place for </p>
-            <p>your lp artwork </p>
+            <p>The place for</p>
+            <p>Lp artwork </p>
           </span>
           <div className="lowertag">
-            <p>Share your LP collection.</p>
+            <p>Share your collection.</p>
             <p>Keep track of what has been purchased.</p>
           </div>
         </div>

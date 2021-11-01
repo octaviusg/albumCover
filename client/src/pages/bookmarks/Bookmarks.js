@@ -4,6 +4,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import BackBtn from "../../components/backbtn/BackBtn.jsx";
 import "./bookmarks.css";
 
 export default function Bookmarks() {
@@ -24,24 +25,28 @@ export default function Bookmarks() {
 
       <div className="bodyContent">
         <Sidebar />
-        <div className="gridBooks">
-          {posts &&
-            posts.map((c) => (
-              <div className="grid-itemBooks">
-                <Link to={`/${c._id}`}>
-                  <img
-                    onContextMenu="return false"
-                    src={c.catNum}
-                    alt=""
-                    className="gridImgBooks"
-                  />
-                </Link>
-                <Link className="linksbook" to={`/${c._id}`}>
-                  <div className="title"> {c.title.slice(0, 1)}</div>
-                  <div> {c.title.slice(1)}</div>
-                </Link>
-              </div>
-            ))}
+
+        <div className="gridContainer">
+          <BackBtn />
+          <div className="gridBooks">
+            {posts &&
+              posts.map((c) => (
+                <div className="grid-itemBooks">
+                  <Link to={`/album-info/${c._id}`}>
+                    <img
+                      onContextMenu="return false"
+                      src={c.catNum}
+                      alt=""
+                      className="gridImgBooks"
+                    />
+                  </Link>
+                  <Link className="linksbook" to={`/album-info/${c._id}`}>
+                    <div className="title"> {c.title.slice(0, 1)}</div>
+                    <div> {c.title.slice(1)}</div>
+                  </Link>
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     </div>

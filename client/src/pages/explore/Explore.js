@@ -29,7 +29,7 @@ export default function Explore() {
           {posts &&
             posts.map((c) => (
               <div className="grid-item">
-                <Link to={`/${c._id}`}>
+                <Link to={`/album-info/${c._id}`}>
                   <img
                     onContextMenu="return false"
                     src={c.catNum}

@@ -19,7 +19,7 @@ export default function GridItem({ post }) {
 
   return (
     <div className="grid-itemCo">
-      <Link to={`/${post._id}`}>
+      <Link to={`/album-info/${post._id}`}>
         <img
           oncontextmenu="return false"
           src={post.catNum}

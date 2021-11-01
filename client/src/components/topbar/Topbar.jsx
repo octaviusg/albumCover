@@ -1,14 +1,33 @@
 import React, { useContext } from "react";
 import "./topbar.css";
-import SearchIcon from "@material-ui/icons/Search";
-import NotificationsIcon from "@material-ui/icons/Notifications";
+import { VscSearch } from "react-icons/vsc";
+import { useState } from "react";
 import blankProfile from "../blank-profile.png";
-import PersonIcon from "@material-ui/icons/Person";
 import { Link } from "react-router-dom";
+import { VscBell } from "react-icons/vsc";
 import { AuthContext } from "../../context/AuthContext";
 
 export default function Topbar() {
   const { user } = useContext(AuthContext);
+  const [showText, setShowText] = useState(false);
+  const onClick = () => setShowText(true);
+  const onClickC = () => setShowText(false);
+
+  const Notification = () => (
+    <div className="nMenu">
+      <div className="nMenuItem">
+        <Link className="notificationMenuLink">
+          <img
+            src={user.profilePicture || blankProfile}
+            alt=""
+            className="notificationImg"
+          />
+          waylon bookmarked Harvest
+        </Link>
+      </div>
+    </div>
+  );
+
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
@@ -20,7 +39,7 @@ export default function Topbar() {
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
-          <SearchIcon className="searchIcon" />
+          <VscSearch className="searchIcon" />
           <input
             type="text"
             placeholder="Search collections by username"
@@ -30,8 +49,13 @@ export default function Topbar() {
       </div>
       <div className="topbarRight">
         <div className="topNavIcons">
-          <NotificationsIcon />
+          {showText ? (
+            <VscBell className="noti" onClick={onClickC} />
+          ) : (
+            <VscBell className="noti" onClick={onClick} />
+          )}
           <span className="notifcationBadge"></span>
+          {showText ? <Notification /> : null}
         </div>
         <Link to={`/profile/${user.username}`}>
           <img

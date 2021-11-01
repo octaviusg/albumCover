@@ -1,13 +1,14 @@
 import { useContext } from "react";
 import "./sidebar.css";
-import HomeIcon from "@material-ui/icons/Home";
-import ExploreIcon from "@material-ui/icons/Explore";
-import AddCircleIcon from "@material-ui/icons/AddCircle";
-import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
-import SettingsIcon from "@material-ui/icons/Settings";
-import CollectionsBookmarkIcon from "@material-ui/icons/CollectionsBookmark";
 
-import { Link } from "react-router-dom";
+import { IoIosAddCircleOutline } from "react-icons/io";
+import { VscCompass } from "react-icons/vsc";
+import { BsBookmarks } from "react-icons/bs";
+import { VscGear } from "react-icons/vsc";
+import { VscHome } from "react-icons/vsc";
+import { VscLibrary } from "react-icons/vsc";
+
+import { NavLink } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 
 export default function Sidebar() {
@@ -15,30 +16,60 @@ export default function Sidebar() {
   return (
     <div className="sideBarContainer">
       <div className="sideNav">
-        <Link className="sideLink" activeclassname="active" to="/">
-          <HomeIcon className="navIcon" />
+        <NavLink exact className="sideLink" activeClassName="nav-active" to="/">
+          <VscHome activeClassName="nav-active" className="navIcon" />
           Home
-        </Link>
+        </NavLink>
 
-        <Link className="sideLink" to={`/collection/${user.username}`}>
-          <PhotoLibraryIcon className="navIcon" />
+        <NavLink
+          exact
+          className="sideLink"
+          activeClassName="nav-active"
+          to={`/collection/${user.username}`}
+        >
+          <VscLibrary activeClassName="nav-active" className="navIcon" />
           Collection
-        </Link>
-        <Link className="sideLink" to="/addtitle">
-          <AddCircleIcon className="navIcon" />
+        </NavLink>
+        <NavLink
+          exact
+          className="sideLink"
+          activeClassName="nav-active"
+          to="/addtitle"
+        >
+          <IoIosAddCircleOutline
+            activeClassName="nav-active"
+            className="navIcon"
+          />
           Add title
-        </Link>
-        <Link className="sideLink" to={"/explore"}>
-          <ExploreIcon className="navIcon" />
+        </NavLink>
+        <NavLink
+          exact
+          className="sideLink"
+          activeClassName="nav-active"
+          to={"/explore"}
+        >
+          <VscCompass activeClassName="nav-active" className="navIcon" />
           Explore
-        </Link>
-        <Link className="sideLink" to={`/bookmarks`}>
-          <CollectionsBookmarkIcon className="navIcon" />
+        </NavLink>
+        <NavLink
+          exact
+          className="sideLink"
+          activeClassName="nav-active"
+          to={`/bookmarks`}
+        >
+          <BsBookmarks activeClassName="nav-active" className="navIcon" />
           Bookmarks
-        </Link>
+        </NavLink>
       </div>
       <div className="settings">
-        <SettingsIcon className="navIcon" />
+        <NavLink
+          exact
+          className="sideLink"
+          activeClassName="nav-active"
+          to={`/settings`}
+        >
+          <VscGear activeClassName="nav-active" className="navIcon" />
+        </NavLink>
       </div>
     </div>
   );

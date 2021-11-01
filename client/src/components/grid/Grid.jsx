@@ -11,9 +11,8 @@ export default function Grid({ username }) {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = username
-        ? await axios.get("/posts/profile/" + username)
-        : await axios.get("posts/timeline/" + user._id);
+      const res = await axios.get("/posts/collection/" + username);
+
       setPosts(res.data);
     };
     fetchPosts();

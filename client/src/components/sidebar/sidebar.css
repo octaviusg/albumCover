@@ -10,7 +10,7 @@
   font-weight: 300;
   letter-spacing: 0.5px;
   position: sticky;
-  top: 53px;
+  top: 55px;
 }
 
 .sideNav {
@@ -50,4 +50,8 @@
 .sideLink:hover {
   color: #a0a0a0;
   transition: 0.3s;
+}
+
+.nav-active {
+  color: #b8b8b8;
 }

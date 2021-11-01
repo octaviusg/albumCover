@@ -1,18 +1,18 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./singlePost.css";
-import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
-
-import BookmarkIcon from "@material-ui/icons/Bookmark";
-import axios from "axios";
-import blankProfile from "../blank-profile.png";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
+import axios from "axios";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { BsBookmarkFill } from "react-icons/bs";
+import { BsBookmark } from "react-icons/bs";
+import blankProfile from "../blank-profile.png";
 
 export default function SinglePost({ post }) {
   const [like, setLike] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
   const [user, setUser] = useState({});
-
+  const [click, setClick] = useState(false);
   const { user: currentUser } = useContext(AuthContext);
 
   useEffect(() => {
@@ -36,32 +36,55 @@ export default function SinglePost({ post }) {
     setIsLiked(!isLiked);
   };
 
+  const [showText, setShowText] = useState(false);
+  const onClick = () => setShowText(true);
+  const onClickC = () => setShowText(false);
+
+  const Text = () => (
+    <div className="postMenu">
+      <div className="pMenuItem">
+        <Link className="pmenulink">Delete post</Link>
+      </div>
+      <div className="pMenuItem">
+        <Link className="pmenulink">Report post</Link>
+      </div>
+    </div>
+  );
+
   return (
     <div className="feedContainer">
       <div className="postCard">
         <div className="postHeader">
-          <Link className="link" to={`/profile/${user.username}`}>
-            <div className="author">
-              <img
-                src={user.profilePicture || blankProfile}
-                alt=""
-                className="authorImg"
-              />
+          {showText ? (
+            <HiOutlineDotsHorizontal className="bmark" onClick={onClickC} />
+          ) : (
+            <HiOutlineDotsHorizontal className="bmark" onClick={onClick} />
+          )}
 
-              <span className="authorName">{user.username}</span>
-            </div>
-          </Link>
+          {showText ? <Text /> : null}
+
           <div className="bookmarks">
+            <Link className="link" to={`/profile/${user.username}`}>
+              <div className="author">
+                <img
+                  src={user.profilePicture || blankProfile}
+                  alt=""
+                  className="authorImg"
+                />
+
+                <span className="authorName">{user.username}</span>
+              </div>
+            </Link>
             <div className="bookmarkIcon" />
 
             {isLiked ? (
-              <BookmarkIcon className="bmark" onClick={likeHandler} />
+              <BsBookmarkFill className="bmark" onClick={likeHandler} />
             ) : (
-              <BookmarkBorderIcon className="bmark" onClick={likeHandler} />
+              <BsBookmark className="bmark" onClick={likeHandler} />
             )}
           </div>
         </div>
-        <Link to={`/${post._id}`}>
+        <Link to={`/album-info/${post._id}`}>
           <img src={post.catNum} alt="" className="postImg" />
         </Link>
       </div>

@@ -11,7 +11,7 @@
 }
 
 .topbarLeft {
-  flex: 1;
+  flex: 9;
   margin-left: 4.2rem;
 }
 
@@ -30,8 +30,14 @@
   padding: 8px 10px 8px 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   transition: 0.3s;
+  line-height: 2px;
+  align-items: center;
 }
 .searchBar:hover {
+  box-shadow: rgba(60, 64, 67, 0.13) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.062) 0px 1px 3px 1px;
+}
+.searchBar:focus {
   box-shadow: rgba(60, 64, 67, 0.13) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.062) 0px 1px 3px 1px;
 }
@@ -52,7 +58,8 @@
 .searchIcon {
   color: "#9F9F9F";
   cursor: pointer;
-  font-size: 18px !important;
+  font-size: 12px !important;
+  margin-right: 3px;
 }
 
 .search:focus {
@@ -61,15 +68,19 @@
 
 .topbarRight {
   display: flex;
-  flex: 0.15;
+  flex: 1;
   flex-direction: row;
 }
 
 .topNavIcons {
   display: flex;
-  cursor: pointer;
+  align-items: center;
 }
 
+.noti {
+  font-size: 16pt !important;
+  cursor: pointer;
+}
 .notifcationBadge {
   background-color: #fa7472;
   border-radius: 60%;
@@ -78,8 +89,8 @@
   height: 8px;
   width: 8px;
   position: relative;
-  right: 10px;
-  top: 0;
+  right: 8px;
+  top: -7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,4 +103,34 @@
   border-radius: 50%;
   cursor: pointer;
   margin-right: 10px;
+}
+
+.nMenu {
+  margin-top: 13.4rem;
+  margin-left: -12.4rem;
+  position: absolute;
+  font-size: 9pt;
+  background-color: #ffffff;
+  min-width: 150px;
+  min-height: 160px;
+  box-shadow: rgba(109, 97, 97, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  text-decoration: none;
+  border-radius: 0 0 7px 7px;
+}
+
+.notificationMenuLink {
+  text-decoration: none;
+  color: #202020;
+  display: flex;
+  align-items: center;
+  padding: 5pt 15pt 5pt 15pt;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.notificationImg {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 8px;
 }

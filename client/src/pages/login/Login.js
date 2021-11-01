@@ -29,7 +29,7 @@ export default function Login() {
 
         <div className="signupBtnContainer">
           <Link to="/signup">
-            <button className="signUpBtnNew">Sign Up</button>
+            <button className="signUpBtnNew">Sign up</button>
           </Link>
         </div>
       </div>
@@ -69,7 +69,7 @@ export default function Login() {
                 {isFetching ? (
                   <CircularProgress color="inherit" size="10px" />
                 ) : (
-                  "Log In"
+                  "Log in"
                 )}
               </button>
             </div>

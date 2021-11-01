@@ -4,6 +4,7 @@ import "./userprofile.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router";
+import { RiUserAddLine } from "react-icons/ri";
 
 import blankProfile from "../blank-profile.png";
 
@@ -32,7 +33,9 @@ export default function UserProfile() {
         </div>
 
         <div className="userInteraction">
-          <button className="followUser">Follow +</button>
+          <button className="followUser">
+            Follow <RiUserAddLine />
+          </button>
         </div>
       </div>
 

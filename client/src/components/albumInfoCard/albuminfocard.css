@@ -1,19 +1,20 @@
 .albumInfoContainer {
   flex: 11.5;
   display: flex;
-  flex-wrap: wrap;
+  margin-bottom: 5rem;
 }
 
 .albumHeader {
   display: flex;
   margin-bottom: 5px;
+  width: 1000px;
 }
+
 .content {
   padding: 1% 0 0 1%;
-  flex-wrap: wrap;
 }
 .tt {
-  font-size: 26pt;
+  font-size: 24pt;
   font-weight: 300;
 }
 
@@ -46,21 +47,23 @@ table {
   display: grid;
   grid-template-columns: 3fr;
   grid-auto-flow: row;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
 }
 
 td {
   width: max-content;
+  margin-bottom: 0.3rem;
 }
 
 .titles {
-  padding-right: 1.3rem;
+  padding-right: 2px;
+  overflow: scroll;
 }
 
 .gnAtt {
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
+  margin-left: 1%;
 }
 
 .yearGroup {
@@ -88,7 +91,7 @@ td {
 }
 
 .position {
-  padding-right: 3%;
+  padding-right: 1%;
   font-weight: 200;
 }
 
@@ -96,14 +99,8 @@ td {
   font-weight: 500;
 }
 
-.trackTitle li {
-  height: 20px;
-  overflow: hidden;
-}
-
 .trackDuration {
   font-weight: 200;
-  padding-right: 3%;
 }
 
 .right {

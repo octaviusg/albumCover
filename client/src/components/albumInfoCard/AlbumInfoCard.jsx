@@ -2,8 +2,11 @@ import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import "./albuminfocard.css";
-import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
-import BookmarkIcon from "@material-ui/icons/Bookmark";
+
+import { BsBookmarkFill } from "react-icons/bs";
+import { BsBookmark } from "react-icons/bs";
+
+import BackBtn from "../backbtn/BackBtn";
 import { AuthContext } from "../../context/AuthContext";
 
 export default function AlbumInfoCard() {
@@ -18,7 +21,7 @@ export default function AlbumInfoCard() {
 
   useEffect(() => {
     const fetchUserPosts = async () => {
-      const res = await axios.get(`/posts/${postId}`);
+      const res = await axios.get(`/posts/album-info/${postId}`);
       setPost(res.data);
       setName(res.data.title);
       setTrackList(res.data.trackList);
@@ -40,6 +43,7 @@ export default function AlbumInfoCard() {
   return (
     <div className="albumInfoContainer">
       <div className="content">
+        <BackBtn />
         <div className="albumHeader">
           <div className="at-anAtt">
             {name &&
@@ -50,9 +54,9 @@ export default function AlbumInfoCard() {
           </div>
           <div className="bookmark-Ainfo">
             {isLiked ? (
-              <BookmarkIcon className="bmark" onClick={likeHandler} />
+              <BsBookmarkFill className="bmark" onClick={likeHandler} />
             ) : (
-              <BookmarkBorderIcon className="bmark" onClick={likeHandler} />
+              <BsBookmark className="bmark" onClick={likeHandler} />
             )}
           </div>
         </div>

@@ -1,16 +1,15 @@
+import React from "react";
+import UserSetsComp from "../../components/userSetsComp/UserSetsComp";
 import Topbar from "../../components/topbar/Topbar";
 import Sidebar from "../../components/sidebar/Sidebar";
-import Feed from "../../components/feed/Feed";
 
-import "./home.css";
-
-export default function Home() {
+export default function UserSettings() {
   return (
     <div>
       <Topbar />
       <div className="bodyContent">
         <Sidebar />
-        <Feed />
+        <UserSetsComp />
       </div>
     </div>
   );

@@ -70,10 +70,11 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.get("/album-info/", async (req, res) => {
+router.get("/album-info/:id", async (req, res) => {
   try {
-    const post = await Post.findById(req.params.id);
-    res.status(200).json(post);
+    const albumPost = await Post.findById({ _id: req.params.id });
+
+    res.status(200).json(albumPost);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -83,7 +84,6 @@ router.get("/album-info/", async (req, res) => {
 router.get("/explore/:username", async (req, res) => {
   try {
     const posts = await Post.find();
-
     const shuffled = posts.sort(() => Math.random() - 0.7);
 
     res.status(200).json(shuffled);
@@ -131,5 +131,30 @@ router.get("/profile/:username", async (req, res) => {
 });
 
 //get users collection
+router.get("/collection/:username", async (req, res) => {
+  try {
+    const user = await User.findOne({ username: req.params.username });
+    const collectionPosts = await Post.find({ userId: user._id });
+    const shuffled = collectionPosts.sort(() =>
+      Math.floor(Math.random() - 0.7)
+    );
+    res.status(200).json(shuffled);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/", async (req, res) => {
+  const title = req.query.title;
+  const genre = req.query.genre;
+
+  try {
+    const theyear = await Post.find({ title: title });
+
+    res.status(200).json(theyear);
+  } catch (err) {
+    res.status(500).json();
+  }
+});
 
 module.exports = router;
