@@ -91,3 +91,17 @@
 .pmenulink:hover {
   color: #d3d3d3;
 }
+
+@media screen and (max-width: 480px) {
+  .postCard {
+    margin-bottom: 0.6rem;
+  }
+  .postImg {
+    width: 260px;
+    height: 260px;
+  }
+
+  .postHeader {
+    width: 265px;
+  }
+}

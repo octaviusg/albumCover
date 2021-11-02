@@ -12,7 +12,7 @@ import UserCollection from "./pages/usercollection/UserCollection";
 import NewPost from "./pages/newpost/NewPost";
 import Bookmarks from "./pages/bookmarks/Bookmarks";
 import AlbumInfo from "./pages/albumInfo/AlbumInfo";
-import Settings from "./pages/settings/UserSettings";
+
 import UserSettings from "./pages/settings/UserSettings";
 import {
   BrowserRouter as Router,

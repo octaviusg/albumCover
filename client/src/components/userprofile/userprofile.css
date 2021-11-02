@@ -5,27 +5,20 @@
 }
 .bodyContent {
   display: flex;
-  width: 100%;
 }
 
 .profileInfo {
   display: flex;
-  height: 8rem;
-  width: 75rem;
+  flex-direction: row;
   border-radius: 10px;
-  color: #202020;
-  margin-bottom: 20px;
-  margin-top: 5px;
   align-items: center;
+  color: #202020;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
 
-.userbio {
-  margin-left: 10px;
-  min-width: 400px;
-}
 .userName {
   font-size: 14pt;
-
   display: inline-block;
 }
 
@@ -42,10 +35,10 @@
 }
 
 .userbio {
-  align-self: center;
-  flex: 8.3;
+  flex: 7.3;
   display: flex;
   flex-direction: column;
+  margin-left: 10px;
 }
 
 .userInteraction {
@@ -152,4 +145,28 @@
   transition: 0.3s;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
   text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+  .profileInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .userbio {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .userInteraction {
+    display: flex;
+    align-self: center;
+  }
+
+  .followUser {
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
 }

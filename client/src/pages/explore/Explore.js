@@ -6,6 +6,8 @@ import Topbar from "../../components/topbar/Topbar";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./explore.css";
 import { Link } from "react-router-dom";
+import MobileNav from "../../components/mobileNav/MobileNav";
+import MobileBottomNav from "../../components/mobileBottomNav/MobileBottomNav";
 
 export default function Explore() {
   const [posts, setPosts] = useState(null);
@@ -22,6 +24,7 @@ export default function Explore() {
   return (
     <div className="exploreContainer">
       <Topbar />
+      <MobileNav />
       <div className="bodyContent">
         <Sidebar />
 
@@ -41,6 +44,7 @@ export default function Explore() {
             ))}
         </div>
       </div>
+      <MobileBottomNav />
     </div>
   );
 }

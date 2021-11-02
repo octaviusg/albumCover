@@ -40,7 +40,7 @@
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   border-radius: 10px;
   background-color: var(--formBg-color);
-  padding: 1.6rem 1rem;
+  padding: 1.6rem 2rem;
 }
 
 .login-input {
@@ -157,5 +157,6 @@ select:-webkit-autofill:focus {
 @media screen and (max-width: 480px) {
   .loginformwrap {
     width: 36vh;
+    padding: 1.6rem 1rem;
   }
 }

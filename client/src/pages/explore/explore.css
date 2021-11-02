@@ -27,3 +27,11 @@
   grid-row: span 2;
   grid-column: span 2;
 }
+
+@media screen and (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    margin-left: 2.2%;
+    margin-right: 2.2%;
+  }
+}

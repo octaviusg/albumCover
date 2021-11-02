@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 import Grid from "../grid/Grid";
 import { VscSearch } from "react-icons/vsc";
 import { BsVinyl } from "react-icons/bs";
+import MobileCollecSearch from "../mblCollecSearchBar/MobileCollecSearch";
 
 function Collection() {
   const [user, setUser] = useState({});
@@ -21,6 +22,7 @@ function Collection() {
 
   return (
     <div className="collectionContainer">
+      <MobileCollecSearch />
       <div className="cSearchContainer">
         <div className="searchBar">
           <VscSearch className="searchIcon" />

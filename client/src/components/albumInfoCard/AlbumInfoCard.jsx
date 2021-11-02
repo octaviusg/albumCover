@@ -43,7 +43,6 @@ export default function AlbumInfoCard() {
   return (
     <div className="albumInfoContainer">
       <div className="content">
-        <BackBtn />
         <div className="albumHeader">
           <div className="at-anAtt">
             {name &&

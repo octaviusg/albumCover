@@ -1,13 +1,14 @@
 .albumInfoContainer {
   flex: 11.5;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 5rem;
 }
 
 .albumHeader {
   display: flex;
   margin-bottom: 5px;
-  width: 1000px;
+  min-width: 1000px;
 }
 
 .content {
@@ -41,6 +42,7 @@
 
 .albumTrackInfo {
   display: flex;
+  flex-wrap: wrap;
 }
 
 table {
@@ -57,7 +59,6 @@ td {
 
 .titles {
   padding-right: 2px;
-  overflow: scroll;
 }
 
 .gnAtt {
@@ -114,4 +115,83 @@ td {
 .T-title {
   font-size: 8pt;
   font-weight: 200;
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .albumAtt {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .albumHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .bookmark-Ainfo {
+    margin-left: 0;
+  }
+  .T-title {
+    margin-top: 1rem;
+  }
+  .gnAtt {
+    margin-top: 1rem;
+  }
+
+  .titles {
+    overflow-x: scroll !important;
+    width: 200px;
+  }
+
+  td {
+    overflow-x: scroll;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 8pt;
+  }
+  .content {
+    padding: 0;
+  }
+
+  .trackInfo {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .albumInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tt {
+    font-size: 15pt;
+    font-weight: 300;
+  }
+
+  .tt:nth-child(2) {
+    color: #b1b1b1;
+    font-size: 13pt;
+    font-weight: 100;
+    margin-bottom: 4px;
+  }
+  .albumHeader {
+    min-width: 200px;
+  }
+
+  .albumInfoimg {
+    width: 260px;
+    height: 260px;
+  }
 }

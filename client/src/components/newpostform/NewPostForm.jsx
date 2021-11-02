@@ -88,8 +88,8 @@ export default function NewPostForm() {
             ref={catNum}
           />
           <span className="formatInfo">
-            <span className="contrast"> Examples: </span> EALC-07312
-            <span className="contrast"> | </span> 8496061
+            <span className="contrast"> Examples: </span>
+            8496061
             <span className="contrast"> | </span> AL-2309
           </span>
           <button type="submit" className="share-btn">

@@ -23,3 +23,11 @@
   height: 180px;
   width: 180px;
 }
+
+@media screen and (max-width: 480px) {
+  .gridCollection {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-gap: 0.6rem;
+    margin-left: 3.5%;
+  }
+}

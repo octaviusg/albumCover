@@ -1,0 +1,28 @@
+.mobileNavContainer {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .mobileNavContainer {
+    display: inline;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem 1rem;
+    position: sticky;
+    align-items: center;
+    top: 0;
+    background: #ffffff;
+  }
+
+  .brandingmobile {
+    font-family: "Prompt", sans-serif;
+    text-transform: uppercase;
+    color: #202020;
+    min-width: 100px;
+  }
+
+  .mobileMenu {
+    cursor: pointer;
+    font-size: 16pt;
+  }
+}

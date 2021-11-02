@@ -42,12 +42,28 @@
     rgba(60, 64, 67, 0.062) 0px 1px 3px 1px;
 }
 .searchBtnsContainer {
-  min-width: 30rem;
+  width: 30rem;
   display: flex;
-
   justify-content: space-around;
 }
 
 .vinylIcon {
   margin-left: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  .searchBtnsContainer {
+    display: none;
+  }
+
+  .collectionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .cSearchContainer {
+    display: none;
+  }
 }

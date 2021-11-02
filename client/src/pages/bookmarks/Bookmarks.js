@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import BackBtn from "../../components/backbtn/BackBtn.jsx";
 import "./bookmarks.css";
+import MobileNav from "../../components/mobileNav/MobileNav";
+import MobileBottomNav from "../../components/mobileBottomNav/MobileBottomNav";
 
 export default function Bookmarks() {
   const { user } = useContext(AuthContext);
@@ -23,11 +25,13 @@ export default function Bookmarks() {
     <div>
       <Topbar />
 
+      <MobileNav />
+
       <div className="bodyContent">
         <Sidebar />
 
         <div className="gridContainer">
-          <BackBtn />
+          <BackBtn className="backbtnIcon" />
           <div className="gridBooks">
             {posts &&
               posts.map((c) => (
@@ -49,6 +53,8 @@ export default function Bookmarks() {
           </div>
         </div>
       </div>
+
+      <MobileBottomNav />
     </div>
   );
 }

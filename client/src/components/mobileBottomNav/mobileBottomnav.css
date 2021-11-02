@@ -1,0 +1,29 @@
+.mobileBottomNavContainer {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .mobileBottomNavContainer {
+    display: inline;
+    position: sticky;
+    bottom: 0 !important;
+    color: var(--secondary-text-color);
+    background: var(--btnbg-color);
+    padding: 1rem 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav-active {
+    color: var(--footer-text-color);
+  }
+
+  .sideLink {
+    font-size: 16pt;
+  }
+  .sideLink:nth-child(3) {
+    font-size: 20pt;
+    color: var(--secondary-text-color);
+  }
+}

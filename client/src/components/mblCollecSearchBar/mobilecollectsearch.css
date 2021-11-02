@@ -1,0 +1,18 @@
+.MobileCollecSearchContainer {
+  display: none;
+}
+
+@media screen and (max-width: 480px) {
+  .MobileCollecSearchContainer {
+    display: inline;
+    display: flex;
+    background: #ffffff;
+    padding: 0 0.2rem 1rem;
+    position: sticky;
+    top: 4.5rem;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+}
