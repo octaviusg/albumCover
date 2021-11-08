@@ -1,7 +1,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/octaviusg/albumcover">
     <img src="./client/build/assets/../../public/assets/screenshots/Untitled-1.jpg" alt="Logo" height="80">
   </a>
 
@@ -45,10 +45,10 @@ Cataloging application for vinyl record collection.
 
 
 ## Info
-   <a href="https://github.com/github_username/repo_name">
+   <a href="https://github.com/octaviusg/albumcover">
     <img src="./client/build/assets/../../public/assets/screenshots/hifiscreenshot-1.jpg" alt="app-screenshot" height="300">
   </a>
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/octaviusg/albumcover">
     <img src="./client/build/assets/../../public/assets/screenshots/hifiscreenshot.jpg" alt="app-screenshot" height="300" >
   </a>
  
@@ -62,6 +62,14 @@ The app came about from the need of cataloging my music collection. Information 
 
 ### Built With
 * [React.js](https://reactjs.org/)
+* [Axios](https://axios-http.com/)
+* [Node.js](https://nodejs.org/en/)
+* [Express.js](https://expressjs.com/)
+* [MongoDb](https://www.mongodb.com/)
+* [Heroku](https://www.heroku.com/)
+
+
+  
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -75,10 +83,10 @@ The app came about from the need of cataloging my music collection. Information 
 
 - Users are able to add a title to the collection via catalog number. A request is sent to discogs api to retrive information and send the post request to the mongoDB.
   
-    <a href="https://github.com/github_username/repo_name">
+    <a href="https://github.com/octaviusg/albumcover">
     <img src="./client/build/assets/../../public/assets/screenshots/Screen%20Shot%202021-11-08%20at%201.27.54%20PM.png" alt="app-screenshot"  height="300" >
   </a>
-   <a href="https://github.com/github_username/repo_name">
+   <a href="https://github.com/octaviusg/albumcover">
     <img src="./client/build/assets/../../public/assets/screenshots/Screen%20Shot%202021-11-08%20at%201.41.31%20PM.png" alt="app-screenshot"  height="300" >
   </a>
 
@@ -86,27 +94,27 @@ The app came about from the need of cataloging my music collection. Information 
   
 - Bookmark feature for users to save any title they might want to purchase in the future.
 
-   <a href="https://github.com/github_username/repo_name">
+   <a href="https://github.com/octaviusg/albumcover">
     <img src="./client/build/assets/../../public/assets/screenshots/Screen%20Shot%202021-11-08%20at%201.29.25%20PM.png"alt="app-screenshot" height="200" >
   </a>
-   <a href="https://github.com/github_username/repo_name">
+   <a href="https://github.com/octaviusg/albumcover">
     <img src="./client/build/assets/../../public/assets/screenshots/Screen%20Shot%202021-11-08%20at%201.29.35%20PM.png" alt="app-screenshot"  height="200" >
   </a>
 
-   <a href="https://github.com/github_username/repo_name">
+   <a href="https://github.com/octaviusg/albumcover">
     <img src="./client/build/assets/../../public/assets/screenshots/Screen%20Shot%202021-11-08%20at%201.30.36%20PM.png" alt="app-screenshot"  height="300" >
   </a>
 <br>
 
 
-- User feeds // Home feed 
+- User feeds // The home feed is a mixure of both the user collections and the ones are that being followed. 
 
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://github.com/octaviusg/albumcover">
   <img src="./client/build/assets/../../public/assets/screenshots/userfeed.png" alt="app-screenshot" height="300" >
     </a>
 
      - Explore feed feature, using all the posts I created a route for users to see what others are uploading to their libraries. For Better UX the images are displayed.
-       <a href="https://github.com/github_username/repo_name">
+       <a href="https://github.com/octaviusg/albumcover">
          <img src="./client/build/assets/../../public/assets/screenshots/explore.png" alt="app-screenshot" height="300" >
          </a>
    
